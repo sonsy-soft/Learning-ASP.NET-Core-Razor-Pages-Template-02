@@ -1,0 +1,148 @@
+﻿@page
+@model Server.Pages.Admin.Slides.DeleteModel
+@{
+    var pageTitle =
+        Resources.PageTitles.DeleteSlide;
+
+    ViewData["PageTitle"] = pageTitle;
+
+    if (System.Threading.Thread.CurrentThread.CurrentUICulture.TextInfo.IsRightToLeft)
+    {
+        Layout =
+            "Layouts/Rtl/_Security";
+    }
+    else
+    {
+        Layout =
+            "Layouts/Ltr/_Security";
+    }
+}
+
+
+<div class="container my-0 my-sm-1 my-md-3 my-lg-5">
+    <div class="row">
+        <div class="col-12 p-3   col-md-8 offset-md-2 p-md-4   col-lg-6 offset-lg-3 p-lg-5   bg-light border border-2 rounded-3 shadow-lg">
+            <fieldset>
+                <legend>
+                    @(Resources.PageTitles.DeleteSlide)
+                </legend>
+
+
+                <dl class="row">
+                    <dt class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.SlideViewModel.MainTitle)
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.SlideViewModel.MainTitle)
+                    </dd>
+
+                    <dt class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.SlideViewModel.SubTitle)
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.SlideViewModel.SubTitle)
+                    </dd>
+
+                    <dt class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.SlideViewModel.IsActive)
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.SlideViewModel.IsActive)
+                    </dd>
+
+                    <dt class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.SlideViewModel.StartDateTime)
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.SlideViewModel.StartDateTime)
+                    </dd>
+                    
+                    <dt class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.SlideViewModel.FinishDateTime)
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.SlideViewModel.FinishDateTime)
+                    </dd>
+
+                    
+
+                    <dt class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.SlideViewModel.UrlLink)
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.SlideViewModel.UrlLink)
+                    </dd>
+                    
+                    
+                    <dt class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.SlideViewModel.OrderingNumber)
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.SlideViewModel.OrderingNumber)
+                    </dd>
+
+                </dl>
+
+            </fieldset>
+
+            <hr class="mt-4" />
+
+            <div class="text-center">
+                <button type="button" class="btn btn-outline-danger" onclick="openModal()">
+                    @(Resources.ButtonCaptions.Delete)
+                </button>
+                |
+                <a asp-page="./Index" class="btn btn-outline-secondary">@(Resources.ButtonCaptions.Back)</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="delete-conformation" data-bs-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="deleteconformationLabel">
+    <div class="modal-dialog modal-dialog-centered" style="width:501px !important;margin:0 auto;">
+        <div class="modal-content">
+            <div class="modal-header" style="background:#d9534f;color:white;">
+                <h4 class="modal-title" id="delete-conformation">
+                    @(Resources.PageTitles.DeleteSlide)
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <span>
+                                @(Resources.DataDictionary.DeleteConfirmationMessage)
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" onclick="closeModal()">
+                        @(Resources.ButtonCaptions.No)
+                    </button>
+                    <form asp-page-handler="Delete" method="post">
+                        <input type="hidden" asp-for="Id" />
+                        <button class="btn btn-danger">
+                            @(Resources.ButtonCaptions.Delete)
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+
+    <script type="text/javascript">
+        function openModal() {
+            $('#delete-conformation').modal('show');
+        }
+        function closeModal() {
+            $('#delete-conformation').modal('hide');
+        }
+    </script>
+
+}

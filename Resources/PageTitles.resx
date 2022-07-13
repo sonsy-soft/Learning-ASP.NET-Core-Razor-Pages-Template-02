@@ -132,8 +132,20 @@
   <data name="Contact" xml:space="preserve">
     <value>Contact</value>
   </data>
+  <data name="CreateSlide" xml:space="preserve">
+    <value>CreateSlide</value>
+  </data>
   <data name="DeactivateAccount" xml:space="preserve">
     <value>Deactivate Account</value>
+  </data>
+  <data name="DeleteSlide" xml:space="preserve">
+    <value>DeleteSlide</value>
+  </data>
+  <data name="DetailsSlide" xml:space="preserve">
+    <value>DetailSlide</value>
+  </data>
+  <data name="EditeSlide" xml:space="preserve">
+    <value>EditeSlide</value>
   </data>
   <data name="Error500" xml:space="preserve">
     <value>Internal Server Error!</value>
@@ -143,6 +155,9 @@
   </data>
   <data name="Index" xml:space="preserve">
     <value>Home</value>
+  </data>
+  <data name="IndexSlide" xml:space="preserve">
+    <value>IndexSlide</value>
   </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>

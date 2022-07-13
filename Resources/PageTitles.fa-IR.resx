@@ -132,8 +132,20 @@
   <data name="Contact" xml:space="preserve">
     <value>تماس با ما</value>
   </data>
+  <data name="CreateSlide" xml:space="preserve">
+    <value>اسلاید جدید</value>
+  </data>
   <data name="DeactivateAccount" xml:space="preserve">
     <value>غیرفعال کردن حساب کاربری</value>
+  </data>
+  <data name="DeleteSlide" xml:space="preserve">
+    <value>حذف اسلاید</value>
+  </data>
+  <data name="DetailsSlide" xml:space="preserve">
+    <value>جزئیات اسلاید</value>
+  </data>
+  <data name="EditeSlide" xml:space="preserve">
+    <value>ویرایش اسلاید</value>
   </data>
   <data name="Error500" xml:space="preserve">
     <value>خطای داخلی سرور!</value>
@@ -143,6 +155,9 @@
   </data>
   <data name="Index" xml:space="preserve">
     <value>صفحه نخست</value>
+  </data>
+  <data name="IndexSlide" xml:space="preserve">
+    <value>فهرست اسلاید</value>
   </data>
   <data name="Login" xml:space="preserve">
     <value>ورود</value>

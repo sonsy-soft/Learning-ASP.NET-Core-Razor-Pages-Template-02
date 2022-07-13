@@ -8,6 +8,9 @@
 			//Database.EnsureCreated();
 		}
 
+        public Microsoft.EntityFrameworkCore.DbSet<Domain.Cms.Slides.Slider>? Sliders { get; set; }
+
+
 		protected override void OnConfiguring
 			(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder optionsBuilder)
 		{
@@ -17,6 +20,8 @@
 		protected override void OnModelCreating
 			(Microsoft.EntityFrameworkCore.ModelBuilder modelBuilder)
 		{
+            modelBuilder.ApplyConfigurationsFromAssembly
+                (typeof(Configurations.Slides.SliderConfiguration).Assembly);
 		}
 	}
 }

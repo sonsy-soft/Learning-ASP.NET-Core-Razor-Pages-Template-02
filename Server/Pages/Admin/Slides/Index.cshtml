@@ -1,0 +1,104 @@
+﻿@page
+@model Server.Pages.Admin.Slides.IndexModel
+@inject Infrastructure.Settings.ApplicationSettings applicationSettings
+
+@{
+    var pageTitle =
+        Resources.PageTitles.IndexSlide;
+
+    ViewData["PageTitle"] = pageTitle;
+
+    if (System.Threading.Thread.CurrentThread.CurrentUICulture.TextInfo.IsRightToLeft)
+    {
+        Layout =
+            "Layouts/Rtl/_Layout";
+    }
+    else
+    {
+        Layout =
+            "Layouts/Ltr/_Layout";
+    }
+}
+
+
+<div class="row">
+    <div class="col table-responsive">
+        <p>
+            <a class="btn btn-outline-info" asp-page="Create">@(Resources.ButtonCaptions.Create)</a>
+        </p>
+        <table class="@(applicationSettings.FileManagerSettings.TableStyle)">
+            <caption>@(Resources.PageTitles.IndexSlide)</caption>
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Sliders[0].Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Sliders[0].MainTitle)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Sliders[0].SubTitle)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Sliders[0].Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Sliders[0].IsActive)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Sliders[0].StartDateTime)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Sliders[0].FinishDateTime)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Sliders[0].UrlLink)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Sliders[0].OrderingNumber)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Sliders)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MainTitle)
+                        </td>
+                        <th>
+                            @Html.DisplayFor(model => item.SubTitle)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(model => item.Description)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(model => item.IsActive)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(model => item.StartDateTime)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(model => item.FinishDateTime)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(model => item.UrlLink)
+                        </th>
+                        <th>
+                            @Html.DisplayFor(model => item.OrderingNumber)
+                        </th>
+                        <td>
+                            <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-outline-success">@(Resources.ButtonCaptions.Edit)</a>|
+                            <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-outline-info">@(Resources.ButtonCaptions.Details)</a> |
+                            <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">@(Resources.ButtonCaptions.Delete)</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

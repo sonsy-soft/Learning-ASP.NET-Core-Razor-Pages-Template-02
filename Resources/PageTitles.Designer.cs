@@ -106,11 +106,47 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CreateSlide.
+        /// </summary>
+        public static string CreateSlide {
+            get {
+                return ResourceManager.GetString("CreateSlide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Deactivate Account.
         /// </summary>
         public static string DeactivateAccount {
             get {
                 return ResourceManager.GetString("DeactivateAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DeleteSlide.
+        /// </summary>
+        public static string DeleteSlide {
+            get {
+                return ResourceManager.GetString("DeleteSlide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DetailSlide.
+        /// </summary>
+        public static string DetailsSlide {
+            get {
+                return ResourceManager.GetString("DetailsSlide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EditeSlide.
+        /// </summary>
+        public static string EditeSlide {
+            get {
+                return ResourceManager.GetString("EditeSlide", resourceCulture);
             }
         }
         
@@ -138,6 +174,15 @@ namespace Resources {
         public static string Index {
             get {
                 return ResourceManager.GetString("Index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to IndexSlide.
+        /// </summary>
+        public static string IndexSlide {
+            get {
+                return ResourceManager.GetString("IndexSlide", resourceCulture);
             }
         }
         

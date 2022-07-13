@@ -115,6 +115,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to FinishDateTime.
+        /// </summary>
+        public static string FinishDateTime {
+            get {
+                return ResourceManager.GetString("FinishDateTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Full Name.
         /// </summary>
         public static string FullName {
@@ -187,6 +196,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to MainTitle.
+        /// </summary>
+        public static string MainTitle {
+            get {
+                return ResourceManager.GetString("MainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
         public static string Name {
@@ -201,6 +219,15 @@ namespace Resources {
         public static string Ordering {
             get {
                 return ResourceManager.GetString("Ordering", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OrderingNumber.
+        /// </summary>
+        public static string OrderingNumber {
+            get {
+                return ResourceManager.GetString("OrderingNumber", resourceCulture);
             }
         }
         
@@ -268,6 +295,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to StartDateTime.
+        /// </summary>
+        public static string StartDateTime {
+            get {
+                return ResourceManager.GetString("StartDateTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SubTitle.
+        /// </summary>
+        public static string SubTitle {
+            get {
+                return ResourceManager.GetString("SubTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Title.
         /// </summary>
         public static string Title {
@@ -282,6 +327,15 @@ namespace Resources {
         public static string UpdateDateTime {
             get {
                 return ResourceManager.GetString("UpdateDateTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UrlLink.
+        /// </summary>
+        public static string UrlLink {
+            get {
+                return ResourceManager.GetString("UrlLink", resourceCulture);
             }
         }
         

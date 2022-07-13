@@ -135,6 +135,9 @@
   <data name="FileManager" xml:space="preserve">
     <value>File Manager</value>
   </data>
+  <data name="FinishDateTime" xml:space="preserve">
+    <value>FinishDateTime</value>
+  </data>
   <data name="FullName" xml:space="preserve">
     <value>Full Name</value>
   </data>
@@ -159,11 +162,17 @@
   <data name="ListOf" xml:space="preserve">
     <value>List of </value>
   </data>
+  <data name="MainTitle" xml:space="preserve">
+    <value>MainTitle</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
   <data name="Ordering" xml:space="preserve">
     <value>Ordering</value>
+  </data>
+  <data name="OrderingNumber" xml:space="preserve">
+    <value>OrderingNumber</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
@@ -186,11 +195,20 @@
   <data name="SourceCode" xml:space="preserve">
     <value>Source Code</value>
   </data>
+  <data name="StartDateTime" xml:space="preserve">
+    <value>StartDateTime</value>
+  </data>
+  <data name="SubTitle" xml:space="preserve">
+    <value>SubTitle</value>
+  </data>
   <data name="Title" xml:space="preserve">
     <value>Title</value>
   </data>
   <data name="UpdateDateTime" xml:space="preserve">
     <value>Update Time</value>
+  </data>
+  <data name="UrlLink" xml:space="preserve">
+    <value>UrlLink</value>
   </data>
   <data name="Username" xml:space="preserve">
     <value>Username</value>

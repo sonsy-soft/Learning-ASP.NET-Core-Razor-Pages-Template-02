@@ -26,7 +26,10 @@
 
 			public const int CellPhoneNumber = 14;
 			public const int CellPhoneNumberVerificationKey = 10;
-		}
+
+            public const int MainTitle = 300;
+            public const int SubTitle = 500;
+        }
 
 		/// <summary>
 		/// https://regex101.com/

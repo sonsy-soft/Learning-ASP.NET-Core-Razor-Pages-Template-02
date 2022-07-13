@@ -1,0 +1,100 @@
+﻿@page
+@model Server.Pages.Admin.Slides.DetailsModel
+@{
+    var pageTitle =
+        Resources.PageTitles.DetailsSlide;
+
+    ViewData["PageTitle"] = pageTitle;
+
+    if (System.Threading.Thread.CurrentThread.CurrentUICulture.TextInfo.IsRightToLeft)
+    {
+        Layout =
+            "Layouts/Rtl/_Security";
+    }
+    else
+    {
+        Layout =
+            "Layouts/Ltr/_Security";
+    }
+}
+
+
+
+<div class="container my-0 my-sm-1 my-md-3 my-lg-5">
+    <div class="row">
+        <div class="col-12 p-3   col-md-8 offset-md-2 p-md-4   col-lg-6 offset-lg-3 p-lg-5   bg-light border border-2 rounded-3 shadow-lg">
+            <fieldset>
+                <legend>
+                    @(Resources.PageTitles.DeleteSlide)
+                </legend>
+
+
+                <dl class="row">
+                    <dt class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.SlideViewModel.MainTitle)
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.SlideViewModel.MainTitle)
+                    </dd>
+
+                    <dt class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.SlideViewModel.SubTitle)
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.SlideViewModel.SubTitle)
+                    </dd>
+
+                    <dt class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.SlideViewModel.IsActive)
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.SlideViewModel.IsActive)
+                    </dd>
+
+                    <dt class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.SlideViewModel.StartDateTime)
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.SlideViewModel.StartDateTime)
+                    </dd>
+                    
+                    <dt class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.SlideViewModel.FinishDateTime)
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.SlideViewModel.FinishDateTime)
+                    </dd>
+
+                    
+
+                    <dt class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.SlideViewModel.UrlLink)
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.SlideViewModel.UrlLink)
+                    </dd>
+                    
+                    
+                    <dt class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.SlideViewModel.OrderingNumber)
+                    </dt>
+                    <dd class="col-sm-9">
+                        @Html.DisplayFor(model => model.SlideViewModel.OrderingNumber)
+                    </dd>
+
+                </dl>
+
+            </fieldset>
+
+            <hr class="mt-4" />
+
+            <div class="text-center">
+
+                <a asp-page="./Edit" asp-route-id="@Model.SlideViewModel?.Id" class="btn btn-outline-primary">@(Resources.ButtonCaptions.Edit)</a> |
+                <a asp-page="./Index" class="btn btn-outline-secondary">@(Resources.ButtonCaptions.Back)</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
